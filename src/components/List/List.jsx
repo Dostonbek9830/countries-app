@@ -1,32 +1,27 @@
 import "./list.css";
+import { Card } from "../Card/Card";
 
-export const List = () => {
+export const List = ({ countryData }) => {
   return (
-    <ul className="country__list">
-      <li className="country__card">
-        <img className="country__img" src="" alt="Germany flag" />
-        <h3 className="country__name">Germany</h3>
-        <ul className="country__detail-info-list">
-          <li className="country__detail-item">
-            <p className="country__population">
-              <strong>Population:</strong> 81,770,900
-            </p>
-          </li>
-          <li className="country__detail-item">
-            <p className="country__region">
-              <strong>Region:</strong> Europe
-            </p>
-          </li>
-          <li className="country__detail-item">
-            <p className="country__capital">
-              <strong>Capital:</strong> Berlin
-            </p>
-          </li>
+    <>
+      <div className="container">
+        <ul className="country__list">
+          {countryData.map((item) => {
+            return (
+              <Card
+                key={item.name.common}
+                alt={item.name.common}
+                img={item.flags.png}
+                country={item.name.common}
+                population={item.population}
+                region={item.region}
+                capital={item.capital}
+                cca2={item.cca2}
+              />
+            );
+          })}
         </ul>
-        <a href="#" className="btn__more-info">
-          More...
-        </a>
-      </li>
-    </ul>
+      </div>
+    </>
   );
 };

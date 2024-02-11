@@ -1,0 +1,40 @@
+header {
+    height: 80px;
+    background-color: #2B3844;
+}
+
+
+.header__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 23px;
+    
+}
+
+.header__title {
+    color: #FFF;
+    font-family: "Nunito Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    border: transparent;
+    color: #FFF;
+    font-family: "Nunito Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.header__switch-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
